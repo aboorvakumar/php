@@ -1,0 +1,22 @@
+<?php
+$a=$_POST['name'];
+$b=$_POST['mobile'];
+$c=$_POST['email'];
+$d=$_POST['password']
+echo $a."<br>";
+echo $b."<br>";
+echo $c."<br>";
+echo $d;
+
+$host="localhost";
+$user="root";
+$pass="";
+
+mysql_connect($host,$user,$pass);
+mysql_select_db("test");
+$query=mysql_query("insert into student values('$a','$b','$c','$d')");
+if($query)
+{
+	echo "Success";
+}
+?>
